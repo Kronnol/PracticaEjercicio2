@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PractExa1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="empleado">
+    <Key>
+      <PropertyRef Name="codigo_empleado" />
+    </Key>
+    <Property Name="codigo_empleado" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Horas_laboradas" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="Salario_Hora" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+    <Property Name="Salario_Bruto" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PractExa1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="empleadoes" EntityType="Self.empleado" />
+  </EntityContainer>
+</Schema>
